@@ -31,5 +31,5 @@ scrollcoords = [(xres*1376/1536, yres*820/1024), (xres*650/1536, yres*820/1024),
 while True:
     for (x, y) in scrollcoords:
         moveTo(x, y, 0)
-        scroll(-500, 300, 700)
+        scroll(-500, x, y)
         sleep(0.2)
