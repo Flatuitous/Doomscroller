@@ -1,4 +1,4 @@
-from pyautogui import position, size, moveTo, dragTo, scroll, leftClick
+from pyautogui import size, moveTo, dragTo, scroll
 import webbrowser
 
 xres = size()[0]
