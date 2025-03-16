@@ -1,0 +1,33 @@
+from pyautogui import position, size, moveTo, dragTo, scroll, leftClick
+import webbrowser
+
+xres = size()[0]
+yres = size()[1]
+xtab = size()[0]*1357/1536
+ytab = size()[1]*14/1024
+
+sites = ['youtube.com/shorts',
+         'tiktok.com',
+         'instagram.com/reels',
+         ]
+
+coords = [(0, yres/8), (0, yres*7/8), (xres, yres*7/8), (xres, yres/8)]
+
+for site, (x, y) in enumerate(coords):
+    webbrowser.open_new(sites[site])
+    moveTo(xtab, ytab, 0)
+    dragTo(x, y, 0.2)
+    #leftClick()
+
+
+'''
+#moveTo(xtab, ytab, 0)
+
+#while True:
+#    print(position())
+
+#moveTo(x, y, 0)
+#moveTo(size()[0]/2, size()[1]/2)
+#scroll(-500, 300, 700)
+#dragTo(0, 50, 0.2)
+'''
